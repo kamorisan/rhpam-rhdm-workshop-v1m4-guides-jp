@@ -1,10 +1,12 @@
-# DataSources
+# データソースの作成
 
-Before we can build a reporting page, we first need to define and create a so called *DataSource* that will provide the data that our report(s) will render.
+レポートページを構築する前に、まず、レポートがレンダリングするデータを提供する **データソース** を定義して作成する必要があります。
 
-As mentioned in the introduction of this scenario, a DataSet in Process Automation Manager 7 can be based on various data providers, including Java Beans, CSV and SQL. In this example we will use a DataSet that uses the SQL provider.
+Process Automation Manager 7 のデータセットは、Java Beans、CSV、SQLなど様々なデータプロバイダを利用することができます。
+この例では、SQLプロバイダを利用したデータセットを使用します。
 
-For this scenario, we’ve prepared a database with task data and customer satisfaction data of our *Credit Card Dispute* use-case. The database is a pre-provisioned PostgreSQL database running in our OpenShift environment.
+今回のシナリオでは、**クレジットカードのチャージバック申請** のユースケースのタスクデータと顧客満足度データを格納したデータベースを用意しました。
+このデータベースは、OpenShift環境で稼働している事前に提供されたPostgreSQLデータベースです。
 
 * Host: `postgresql.labs-infra.svc.cluster.local`
 * Port: `5432`
@@ -12,9 +14,9 @@ For this scenario, we’ve prepared a database with task data and customer satis
 * Password: `postgres`
 * Database:  `postgres`
 
-In Business Central, you can use this information to create a new *DataSource* that we can later use in our *DataSet*.
+Business Centralでは、このデータを使用して新しい **データソース** を作成し、後で **データセット** として使用できるようになります
 
-Before we can create a new *DataSource*, we first need to install the correct driver for our database.
+新しい **データソース** を作成する前に、まず、データベース用の正しいドライバをインストールする必要があります。
 
 ---
 **NOTE**
