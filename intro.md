@@ -1,9 +1,12 @@
-# Introduction
+# イントロダクション
 
-In this module we will explore the dashboard and reporting capabilities of Red Hat Process Automation Manager 7.
+このモジュールでは、Red Hat Process Automation Manager 7 のダッシュボードとレポート機能について説明します。
 
-Based on the Form Modeler and DataSet capabilities of Process Automation Manager 7, the Reporting components provide a fast and intuitive way to create sophisticated reports, reporting web-pages, and reporting applications, using an easy to use drag-and-drop modeler.
+Process Automation Manager 7 のフォームモデラーとデータセット機能をベースに、使いやすいドラッグ＆ドロップモデラーを使用して、レポーティングアプリケーションを迅速かつ直感的に作成することが可能です。
 
-In this course you will learn how to create your first Reporting page on Red Hat Process Automation Manager. The project will be built in the Process Automation Manager web-based workbench, that allows both developers and business users (e.g. business analysts, process practitioners) to create, manage and maintain business reports and reporting applications. This *workbench* is called **Business Central**.
+このコースでは、Red Hat Process Automation Manager上でポートページを作成する方法を学びます。
+このプロジェクトは、開発者と業務ユーザー（ビジネスアナリスト、プロセス実務者など）の両方がビジネスレポートやレポートアプリケーションを作成、管理、保守することができる Process Automation Manager のWebベースのワークベンチで構築されます。このワークベンチは、**Business Central**と呼ばれています。
 
-The example report will be based on a dataset with tasks data and customer satisfaction data of our credit card dispute use-case. Process Automation Manager 7 supports multiple dataset formats, like CSV, database, etc. In this lab we will use a dataset that is stored in a PostgreSQL relational database.
+今回のレポートの例では、クレジットカードのチャージバック申請処理のユースケースのタスクデータと顧客満足度データのデータセットに基づいてレポートを作成します。
+Process Automation Manager 7 は、CSV、データベースなどの複数のデータセットフォーマットをサポートしています。
+このラボでは、PostgreSQL RDB に格納されているデータセットを使用します。

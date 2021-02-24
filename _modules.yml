@@ -3,9 +3,9 @@ config:
 
 modules:
   intro:
-    name: Introduction
+    name: イントロダクション
   business-central:
-    name: Business Central Workbench
+    name: Business Central ワークベンチ
   creating-datasources:
     name: Creating DataSources
   creating-datasets:
