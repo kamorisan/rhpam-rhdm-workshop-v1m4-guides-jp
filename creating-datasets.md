@@ -24,19 +24,20 @@ Process Automation Manager 7の *データセット* は、サポートされて
 7. テストが成功したら、`次へ` ボタンをクリックして、*データセット* を保存します。
 ![Business Central Dataset New Test]({% image_path business-central-dataset-next.png %}){:width="600px"}
 
-The configured query simply selects all the tasks that are active and their owners.
+設定されたクエリは、アクティブなタスクとその所有者をすべて選択するだけです。
 
-We now have a simple *Data Set* that can be used to create a report, which we will do in the next step of this scenario. Let's first create some additional *Data Sets* that we can use in our reporting pages.
+これで、レポートを作成するために使用できるシンプルな *データセット* ができました。
+まず、レポートページで使用できる追加の *データセット* を作成してみましょう。
 
-We will now create the DataSet of our customer satisfaction.
+これから顧客満足度のデータセットを作成していきます。
 
-1. In the *Data Set Explorer* screen, click again on the *New Data Set* button.
-2. Select the *SQL* provider type.
-3. In the *Data Set Creation Wizard*, provide the following configuration:  
-    - Name: `customer_satisfaction`  
-    - Data Source: `PAM-Workshop-Reporting`  
-    - Schema: (leave empty)  
-    - Source: enable *Query* and use the following SQL Query:  
+1. *データセットエクスプローラ* 画面で、再度 *新しいデータセット* ボタンをクリックします。
+2. プロバイダーのタイプは **SQL** を選択します。
+3. *データセット作成ウィザード* では、以下の設定を入力します:  
+    - 名前: `customer_satisfaction`  
+    - データソース: `PAM-Workshop-Reporting`  
+    - スキーマ: (空欄)  
+    - ソース: **クエリー** を選択し、以下のSQLクエリを使用します:  
 <pre class="file" data-target="clipboard">
 select *, (case
                     when satisfactionscore <= 50 then '0-50'        
@@ -55,7 +56,7 @@ select *, (case
     from customer_satisfaction
     order by satisfactionscore_range
 </pre>
-6. Click on the *Test* button. This will execute the query and show a preview of the result.
-7. When the test is successful, click on the *Next* button and save the *Data Set*.
+6. *テスト* ボタンをクリックします。これでクエリが実行され、結果のプレビューが表示されます。
+7. テストが成功したら、`次へ` ボタンをクリックして、*データセット* を保存します。
 
-We have now defined two DataSets, let's build some reports.
+2つのデータセットを定義したので、レポートを作成してみましょう。
