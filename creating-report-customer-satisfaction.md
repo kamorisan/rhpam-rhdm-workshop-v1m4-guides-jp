@@ -1,25 +1,26 @@
-# Customer Satisfaction Report
+# 顧客満足度レポートの作成
 
-We will now create a second report that visualizes our customer satisfaction. For this we use our the `customer-satisfaction` *Data Set* that we created earlier.
+ここで、顧客満足度を可視化する2つ目のレポートを作成します。このために、先ほど作成した `customer-satisfaction` *データセット* を使用します。
 
-In this report we will try to create a bar-chart that shows the number of customer satisfaction reports per satisfaction score range. I.e. we count all scores that core lower than 50%, and after that we count the number of scores per 5% range, e.g. 50%-55%, 55%-60%, 60%-65%, etc.
+このレポートでは、満足度スコアの範囲ごとの顧客満足度レポートの数を示す棒グラフを作成してみます。
+すなわち、50%よりも低いスコアをコアとするすべてのスコアをカウントし、その後、5%の範囲ごとのスコアの数をカウントしています（例えば、50%～55%、55%～60%、60%～65%など）。
 
-Note that the query we've used in our data-set already categorizes each customer satisfaction entry into one of these ranges.
+データセットで使用したクエリは、顧客満足度データをこれらの範囲のいずれかに既に分類していることに注意してください。
 
-1. Go to *Menu* -> *Design* -> *Pages* and click on the *New Page* button in the middle of the screen.
-    - **Name**: `customer-satisfaction-report`
-    - **Style**: `Fluid`
-2. The Process Automation Manager drag-and-drop *Page Editor* will open.
-3. From the *Core* menu, drag the *HTML* component to the top of the page. This will open the *HTML Editor*.
-4. In the *HTML Editor*. Align the text in the centre, enable the *Bold* font and select *h1 (Big Title)*. Write the text "Customer Satisfaction Report" and click on *Ok*.
+1. *メニュー* -> *設計* -> *ページ* に移動し、画面中央の *新規ページ* ボタンをクリックします。
+    - **名前**: `customer-satisfaction-report`
+    - **スタイル**: `流動`
+2. レポートページのエディターが開きます。
+3. *コア* メニューから、*HTML* コンポーネントをページの上部にドラッグします。これにより、*HTMLエディタ* が開きます。
+4. *HTMLエディタ* で テキストを中央に揃え、*太字* フォントを有効にし、*h1 (大きなタイトル)* を選択します。`Customer Satisfaction Report` と記入し、*OK* をクリックします。
 ![Create Report Customer Satisfaction HTML]({% image_path dashboard-customer-satisfaction-html.png %}){:width="600px"}
-5. From the *Reporting* components, drag the *Bar* onto the page. In the *New Displayer* configuration page, click on the *Data* tab and select the *customer_satisfaction* Data Set.
-Next, select *satisfactionscore_range* in the *Categories* drop-down list and select the *id* : *Count* in the *Series* section. Click on *Ok*.
-6. Next, select *satisfactionscore_range* in the *Categories* drop-down list and select the *id* : *Count* in the *Series* section. Click on *Ok*.
+5. *レポート* コンポーネントから、*バー* をページにドラッグします。*新規ディスプレイヤー* 画面で、*データ* タブをクリックして、`customer_satisfaction` データセットを選択します。
+6. 次に、*カテゴリ* ドロップダウンリストで `satisfactionscore_range` を選択し、*シリーズ* セクションで `id`  セクションの `回数` を選択します。`OK`をクリックします。
 ![Create Report Customer Satisfaction Bar]({% image_path dashboard-component-bar-config.png %}){:width="600px"}
-7. Add a *Table* component to the page and use the same *Data Set* as the data provider.
-8. Feel free to add additional components to improve the page.
+7. ページに *テーブル* コンポーネントを追加し、データプロバイダと同じ *データセット* を使用します。
+8. 自由にコンポーネントを追加して、ページをカスタマイズしてみてください。
 
-As in the previous report, try to enable filters on the data by select a bar in the bar-chart. Notice how the entry in the table gets filtered.
+前回のレポートと同様に、棒グラフのバーを選択してデータのフィルタリングを有効にしてみてください。
+テーブルのエントリがどのようにフィルタリングされるかに注目してください。
 
 ![Create Report Customer Satisfaction]({% image_path create-report-customer-satisfaction.png %}){:width="600px"}
