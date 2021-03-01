@@ -1,33 +1,35 @@
-# Task Report
+# タスクレポートの作成
 
-With our *Data Source* and *Data Set* configured, we can now create our report. We will first create a report for our tasks,
+*データソース* と *データセット* の設定後、レポートを作成することができます。まず、タスクのレポートを作成します。
 
-Red Hat Process Automation Manager 7 uses its new Form Modeler technology, the modeler that's also used to build process and tasks forms, to build reports. The platform provides a vast array of reporting components that can be used in forms in pages. Furthermore, the reporting components can be easily combined with other Form Modeler components, allowing the user to build rich reporting pages and interfaces.
+Red Hat Process Automation Manager 7 は、プロセスやタスクのフォームを構築する際にも使用される新しいフォームモデラー技術を使用して、レポートを構築します。
+このプラットフォームは、ページ内のフォームで利用できる膨大な数のレポートのコンポーネントを提供します。
+さらに、レポートコンポーネントは他のフォームモデラーコンポーネントと簡単に組み合わせることができ、ユーザーはリッチなレポートページやインターフェースを構築することができます。
 
-Reports are created as so called *Pages* in the Process Automation Manager Business Central workbench. We there need first need to configure a page in which we can define the report.
+レポートは、Business Centralワークベンチで、**ページ** として作成されます。我々はまず、レポートを定義することができるページを設定する必要があります。
 
-1. Go to *Menu* -> *Design* -> *Pages* and click on the *New Page* button in the middle of the screen.
-    - Name: `active-tasks-report`
-    - Style: `Fluid`
+1. *メニュー* -> *設計* -> *ページ* に移動し、画面中央の *新規ページ* ボタンをクリックします。
+    - 名前: `active-tasks-report`
+    - スタイル: `流動`
 ![Create New Page]({% image_path pages-new-page.png %}){:width="600px"}
-2. The Process Automation Manager drag-and-drop *Page Editor* will open.
-3. Explore the *Components* palette. Note that there 3 different types of components, *Core*, *Navigation* and *Reporting*.
-4. Open the *Reporting* components palette. Observe that the *Reporting* menu has various reporting components, like *Bars*, *Pie Charts*,  *Lines*, *Meters* and *Maps*.
-5. From the *Core* menu, drag the *HTML* component to the top of the page. This will open the *HTML Editor*.
+1. レポートページのエディターが開きます。
+2. *コンポーネント* パレットを確認します。コンポーネントには、*コア* 、*ナビゲーション* 、*レポート* の3種類があります。
+3. *レポート* コンポーネントパレットを開きます。*レポート* メニューには、*バー* 、*円（パイ）* 、*Line* 、*メーター* 、*マップ* などのさまざまなレポートコンポーネントがあることを確認してください。
+4. *コア* メニューから、*HTML* コンポーネントをページの上部にドラッグします。これにより、*HTMLエディタ* が開きます。
 ![Create Page Add HTML Component]({% image_path dashboard-html-component.png %}){:width="600px"}
-6. In the *HTML Editor*. Align the text in the centre, enable the *Bold* font and select *h1 (Big Title)*. Write the text "Active Tasks Report" and click on *Ok*.
+6. *HTMLエディタ* で テキストを中央に揃え、*太字* フォントを有効にし、*h1 (大きなタイトル)* を選択します。`Active Task Report` と記入し、*OK* をクリックします。
 ![Create Page Edit HTML Component]({% image_path dashboard-html-component-editing.png %}){:width="600px"}
-7. From the *Reporting* components, drag the *Pie* onto the page.
+7. *レポート* コンポーネントから、*円（パイ）* をページ上にドラッグします。
 ![Create Page Pie Chart Component]({% image_path dashboard-pie-chart.png %}){:width="600px"}
-8. In the *New Displayer* configuration page, click on the *Data* tab and select the *active_tasks_per_owner* Data Set. Next, select *actualowner* in the *Categories* drop-down list and click on *Ok*.
+8. *新規ディスプレイヤー* の設定ページで、*データ* タブをクリックして、`active_tasks_per_owner` データセットを選択します。次に、*カテゴリ* ドロップダウンリストで `actualowner` を選択し、*OK*をクリックします。
 ![Create Page Edit Pie Chart Component]({% image_path dashboard-pie-chart-edit.png %}){:width="600px"}
-9. As we want to make the page a bit more attractive, we add a logo to the top of our screen, next to the report title in the top right corner. From the *Core* components, drag the *HTML* component onto the page and place it next to the page title. In the *HTML Editor* click on the image icon. In the form that opens, use the following URL for the image `https://upload.wikimedia.org/wikipedia/commons/b/b0/Beatles_logo.svg` and click *Ok*. Remove the "Add your HTLM here..." text.
+9. ページをもう少し魅力的にしたいので、画面右上のレポートタイトルの横にロゴを追加します。*コア* コンポーネントから、*HTML* コンポーネントをページ上にドラッグし、ページタイトルの横に配置します。*HTMLエディタ* で、*イメージの挿入* をクリックします。開いたフォームで、以下のURLを画像 `https://upload.wikimedia.org/wikipedia/commons/b/b0/Beatles_logo.svg` に指定し、*OK* をクリックします。*ここにhtmlを追加してください...* のテキストを削除します。
 ![Create Page Image Component]({% image_path dashboard-image-url.png %}){:width="600px"}
-10. This editor also allows advanced formating by directly changing the HTML Source code. Let's make this image smaller. Click on "switch view". Add, to the image tag, the width parameter: `width="200px"` . It should look like `<img width="200" alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Beatles_logo.svg">`. If you switch back the view, you will see the image is now smaller. Click *Ok*.
+10. このエディタでは、HTMLソースコードを直接変更することで、高度な整形も可能です。この画像を小さくしてみましょう。`表示の切り替え` をクリックします。画像タグにwidthパラメータを追加します: `width="200px"`  `<img width="200" alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Beatles_logo.svg">` のようになります。表示を元に戻すと、画像が小さくなっているのが確認できます。*OK* をクリックします。
 ![Create Page Resize Image Component]({% image_path dashboard-image-source-edit.png %}){:width="600px"}
-11. Both the report's title and the logo component now have roughly the same size. You can change the size of the components so the Logo will be placed in the top right corner. Move your mouse in-between the components and click when the "->" arrow appears to increase the size of the title component and decrease the size of the image component. Repeat this until you're happy with the layout of your report.
-12. Save the page by clicking on the *Save* button on the top of the screen.
-13. Hoover over the pie-chart to reveal more information.
+11. レポートのタイトルとロゴのコンポーネントのサイズがほぼ同じになりました。ロゴが右上に配置されるように、コンポーネントのサイズを変更することができます。マウスをコンポーネントの間に移動し、矢印が表示されたらクリックして、タイトルコンポーネントのサイズを大きくし、画像コンポーネントのサイズを小さくします。レポートのレイアウトに満足できるまで、これを繰り返してみてください。
+12. 画面上部の `保存` ボタンをクリックしてページを保存します。
+13. 円グラフの上にカーソルを置くと、より多くの情報が表示されます。
 
 The page should somewhat look like this:
 

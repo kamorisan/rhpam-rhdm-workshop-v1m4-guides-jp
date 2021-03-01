@@ -11,7 +11,7 @@ modules:
   creating-datasets:
     name: データセットの作成
   creating-report-tasks:
-    name: Creating Task Reports
+    name: Task レポートの作成
   creating-report-customer-satisfaction:
     name: Creating Customer Satisfaction Reports
   publishing-report-pages:
