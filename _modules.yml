@@ -17,4 +17,4 @@ modules:
   publishing-report-pages:
     name: Publishing Report Pages
   finish:
-    name: Conclusion
+    name: おわりに
