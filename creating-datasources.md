@@ -21,7 +21,8 @@ Business Centralでは、このデータを使用して新しい **データソ�
 ---
 **NOTE**
 
-Process Automation Manager 7 can come with pre-provisioned database-drivers for MariaDB, MySQL and PostgreSQL, depending on the configuration settings of the platform. If your version already comes with a pre-configured PostgreSQL driver, you can skip the steps of adding the driver.
+Process Automation Manager 7 は、プラットフォームの構成設定に応じて、MariaDB、MySQL、PostgreSQLのための事前に提供されたデータベースドライバを提供することができます。
+お使いのバージョンに既に設定済みのPostgreSQLドライバが付属している場合は、ドライバを追加するステップをスキップすることができます。
 
 ---
 
