@@ -11,10 +11,10 @@ modules:
   creating-datasets:
     name: データセットの作成
   creating-report-tasks:
-    name: Task レポートの作成
+    name: タスクレポートの作成
   creating-report-customer-satisfaction:
-    name: Creating Customer Satisfaction Reports
+    name: 顧客満足度レポートの作成
   publishing-report-pages:
-    name: Publishing Report Pages
+    name: レポートの公開
   finish:
     name: おわりに

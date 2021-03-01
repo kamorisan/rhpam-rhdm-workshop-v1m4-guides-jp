@@ -1,13 +1,15 @@
-# Conclusion
+# おわりに
 
-In this scenario you've learned how to build a reporting page in Red Hat Process Automation Manager 7 on OpenShift using the *DataSource*, *DataSet* and *Pages* capabilities of the platform.
+このシナリオでは、プラットフォームの *データソース* 、*データセット* 、および *ページ* 機能を使用して、OpenShift 上の Red Hat Process Automation Manager 7 でレポートページを構築する方法を学びました。
 
-We started by creating a *DataSource* consuming a PostgreSQL relational database using the *Data Source* settings and configuration tooling in the Business Central workbench.
+Business Centralワークベンチの *データソース* 設定と構成ツールを使用して、PostgreSQLリレーショナルデータベースを利用する *データソース* を作成することから始めました。
 
-From the configured *DataSource*, we created two *DataSets* using the *DataSource* as the SQL provider. We wrote a SQL query that selects the tasks that have been assigned to employees, and another query that retrieves customer satisfaction data.
+設定した *データソース* から、*データソース* をSQLプロバイダとして、2つの *データセット*を作成しました。
+割り当てられたタスクを選択するSQLクエリと、顧客満足度データを取得する別のクエリを作成しました。
 
-Next, we created two reporting pages and, with the integrated Form Modeler, created pages with various charts that rendered the data provided by the *Data Sets* we created earlier.
+次に、2つのレポートページを作成し、統合されたフォームモデラーを使って、先ほど作成した *データセット* によって提供されるデータをレンダリングする様々なチャートを持つページを作成しました。
 
-Finally, we added the reporting pages to the navigation of the Red Hat Process Automation Manager Business Central workbench.
+最後に、Business Central ワークベンチのナビゲーションにレポートページを追加しました。
 
-Red Hat Process Automation Manager supports many more advanced features to create and define (business) reports, consuming various types of data from disparate data sources. Please consult the various online resources (manuals, blogs, demos, forums, etc.) to continue your Red Hat Process Automation Manager journey.
+Red Hat Process Automation Manager は、多様なデータソースから様々なタイプのデータを利用して、（ビジネス）レポートを作成・定義するための、より多くの高度な機能をサポートしています。
+Red Hat Process Automation Manager についてのより詳細な情報については、さまざまなオンラインリソース（マニュアル、ブログ、デモ、フォーラムなど）を参照してください。
