@@ -1,33 +1,37 @@
 Red Hat Process Automation Manager / Decision Manager Workshop Module 4
 ===
-This is `module 4` of a full-day hands-on Red Hat Process Automation Manager and Red Hat Decision Manager workshop. It provides developers and/or business analysts an introduction to Rules- and Process Driven applications and microservices in the context of modern, cloud-native, architectures.
+Red Hat Process Automation Manager と Red Hat Decision Manager の ハンズオンワークショップの `モジュール 4` です。
+このワークショップでは、開発者や業務エキスパートに、最新のクラウドネイティブアーキテクチャのコンテキストでのルールおよびプロセス駆動型アプリケーションとマイクロサービスの紹介を行います。
 
 Agenda
 ===
-* Business Central Workbench
-* Creating Datasources
-* Creating Datasets
-* Creating Tasks Reports
-* Creating Customer Satisfaction Reports
+* イントロダクション
+* Business Central ワークベンチ
+* データソースの作成
+* データセットの作成
+* タスクレポートの作成
+* 顧客満足度レポートの作成
+* レポートの公開
+* おわりに
 
 Lab Instructions on OpenShift
 ===
 
-Note that if you have installed the lab infra via APB, the lab instructions are already deployed.
+APB経由で labs-infra をインストールした場合、ラボインストラクションはすでにデプロイされていることに注意してください。
 
-Here is an example Ansible playbook to deploy the lab instruction to your OpenShift cluster manually.
+ここでは、ラボインストラクションを OpenShift クラスタに手動でデプロイするための Ansible プレイブックの例を示します。
 ```
-- name: Create Guides Module 1
+- name: Create Guides Module 4
   hosts: localhost
   tasks:
   - import_role:
       name: siamaksade.openshift_workshopper
     vars:
-      project_name: "guide-m1"
+      project_name: "guide-m4"
       workshopper_name: "RHPAM / RHDM Workshop V1 Module-4"
       project_suffix: "-XX"
-      workshopper_content_url_prefix: https://raw.githubusercontent.com/RedHat-Middleware-Workshops/rhpam-rhdm-workshop-v1m4-guides/master
-      workshopper_workshop_urls: https://raw.githubusercontent.com/RedHat-Middleware-Workshops/rhpam-rhdm-workshop-v1m4-guides/master/_rhpam-rhdm-workshop-module4.yml
+      workshopper_content_url_prefix: https://raw.githubusercontent.com/kamorisan/rhpam-rhdm-workshop-v1m4-guides-jp/main
+      workshopper_workshop_urls: https://raw.githubusercontent.com/kamorisan/rhpam-rhdm-workshop-v1m4-guides-jp/main/_rhpam-rhdm-workshop-module4.yml
       workshopper_env_vars:
         PROJECT_SUFFIX: "-XX"
         COOLSTORE_PROJECT: coolstore{{ project_suffix }}
