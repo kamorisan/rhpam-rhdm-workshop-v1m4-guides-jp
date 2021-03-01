@@ -26,43 +26,42 @@ Process Automation Manager 7 は、プラットフォームの構成設定に応
 
 ---
 
-1. Go to the “Settings” screen by clicking on the gear icon in the upper right corner:
+1. 右上の歯車アイコンをクリックして `設定` 画面に移動します:
 ![Business Central Settings]({% image_path business-central-settings.png %}){:width="600px"}
-2. Click on the *Data Sources* tile.
+2. `データソース` タイルをクリックします。
 ![Business Central Datasource Settings]({% image_path business-central-settings-datasource.png %}){:width="600px"}
-3. In the *Drivers* section, click on *+ Add Driver*.
-4. In the *New driver* from, entering the following values and click on *Finish*:
+3. *Drivers* セクションで、*+ Add Driver* をクリックします。
+4. *新規ドライバー* で、以下の値を入力し、*完了* をクリックします:
     - Name: `PostgreSQL`  
-    - Driver Class Name: `org.postgresql.Driver`  
-    - Group Id: `org.postgresql`  
-    - Artifact Id: `postgresql`  
-    - Version: `9.4.1212.jre7`  
+    - ドライバークラス名: `org.postgresql.Driver`  
+    - グループ ID: `org.postgresql`  
+    - アーティファクト ID: `postgresql`  
+    - バージョン: `9.4.1212.jre7`  
 
 ![Business Central New Driver]({% image_path business-central-settings-datasource-driver.png %}){:width="600px"}
 
-Next, we can create the *DataSource* that connects to our PostgreSQL database.
+次に、PostgreSQLデータベースに接続する *データソース* を作成します。
 
-1. In the *Data Sources* screen, click on *+ Add DataSource* on the left-hand side of the screen, which will open the *New data source form*.
-2. Fill in the following values:
+1. *データソース* 画面で、画面左側の *+ Add DataSource*  をクリックすると、*新規データソース追加フォーム* が開きます。
+2. 以下の値を記入してください:
     - Name: `PAM-Workshop-Reporting`  
-    - Connection URL: `jdbc:postgresql://postgresql.labs-infra.svc.cluster.local:5432/postgres`  
-    - User: `postgres`  
+    - 接続 URL: `jdbc:postgresql://postgresql.labs-infra.svc.cluster.local:5432/postgres`  
+    - ユーザー: `postgres`  
     - Password: `postgres`  
-    - Driver: `PostgreSQL`  
-3. Click on `Test Connection` to test the setup and if the test is OK, click on `Finish`
+    - ドライバー: `PostgreSQL`  
+3. `テスト接続` をクリックして設定をテストし、問題なければ`完了` をクリックする。
 ![Business Central New Datasource]({% image_path business-central-settings-add-datasource.png %}){:width="600px"}
 
 ![Business Central Test New Datasource]({% image_path business-central-settings-datasource-test-connection.png %}){:width="600px"}
 
-Now that we've created the DataSource, we can explore its content.
+データソースを作成したので、その内容を調べてみましょう。
 
-1. Click on the *PAM-Workshop-Reporting* DataSource that we've just created.
-2. Click on the *Browse content* button at the top of the panel. This will open the *Schemas* of the datasource.
-3. Click on thew *Open* button of the `public` schema.
+1. 先ほど作成した `PAM-Workshop-Reportin`* データソースをクリックして開きます。
+2. パネル上部の *コンテンツの閲覧* ボタンをクリックします。これにより、データソースの *スキーマ* が開きます。
+3. `public` スキーマの `開く` ボタンをクリックします。
 ![RHPAM Enablement Dataset Explore]({% image_path pam-enablement-dataset-explore.png %}){:width="600px"}
-4. The `public` schema of our database contains two tables. One `task` table which contains the open and completed tasks of our credit-card dispute cases, and a `customer_satisfaction` table which contains information of the customer satisfaction related to our credit-card dispute cases.
-5. Click on the *Open* button next to the `task` table and explore the table's content.
-6. Go back to the *public* schema page and click on the *Open* button next to the `customer_satisfaction` table and explore the table's content.
+4. データベースの `public` スキーマには2つのテーブルがあります。1つは、クレジットカードのチャージバック申請案件のオープンタスクと完了タスクを含む `task` テーブルであり、もう1つは、クレジットカードのチャージバック申請案件に関連する顧客満足度の情報を含む `customer_satisfaction` テーブルです。
+5. `task` テーブルの横にある `開く` ボタンをクリックして、テーブルの内容を調べます。
+6. *public* スキーマページに戻り、`customer_satisfaction` テーブルの横にある `開く` ボタンをクリックして、テーブルの内容を調べます。
 
-Now that we've created a connection to our PostgreSQL *DataSource* we can define the *DataSets* that we will use to render our reports.
-creating-datasets.mdcreating-datasets.md
+これで、PostgreSQL *データソース* への接続を作成したので、レポートをレンダリングするために使用する *データセット* を定義することができます。

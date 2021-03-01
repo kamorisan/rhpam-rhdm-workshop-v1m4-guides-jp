@@ -7,7 +7,7 @@ modules:
   business-central:
     name: Business Central ワークベンチ
   creating-datasources:
-    name: Creating DataSources
+    name: データソースの作成
   creating-datasets:
     name: Creating DataSets
   creating-report-tasks:
