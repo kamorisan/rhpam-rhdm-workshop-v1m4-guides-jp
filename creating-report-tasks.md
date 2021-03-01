@@ -27,31 +27,35 @@ Red Hat Process Automation Manager 7 は、プロセスやタスクのフォー�
 ![Create Page Image Component]({% image_path dashboard-image-url.png %}){:width="600px"}
 10. このエディタでは、HTMLソースコードを直接変更することで、高度な整形も可能です。この画像を小さくしてみましょう。`表示の切り替え` をクリックします。画像タグにwidthパラメータを追加します: `width="200px"`  `<img width="200" alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Beatles_logo.svg">` のようになります。表示を元に戻すと、画像が小さくなっているのが確認できます。*OK* をクリックします。
 ![Create Page Resize Image Component]({% image_path dashboard-image-source-edit.png %}){:width="600px"}
-11. レポートのタイトルとロゴのコンポーネントのサイズがほぼ同じになりました。ロゴが右上に配置されるように、コンポーネントのサイズを変更することができます。マウスをコンポーネントの間に移動し、矢印が表示されたらクリックして、タイトルコンポーネントのサイズを大きくし、画像コンポーネントのサイズを小さくします。レポートのレイアウトに満足できるまで、これを繰り返してみてください。
+11. レポートのタイトルとロゴのコンポーネントのサイズがほぼ同じになりました。ロゴが右上に配置されるように、コンポーネントのサイズを変更することができます。マウスをコンポーネントの間に移動し、`←` 、もしくは `→` 矢印が表示されたらダブルクリックして、タイトルコンポーネントのサイズを大きくし、画像コンポーネントのサイズを小さくします。レポートのレイアウトに満足できるまで、これを繰り返してみてください。
 12. 画面上部の `保存` ボタンをクリックしてページを保存します。
 13. 円グラフの上にカーソルを置くと、より多くの情報が表示されます。
 
-The page should somewhat look like this:
+作成したページは以下のようになっているはずです:
 
 ![Create Report Tasks]({% image_path create-report-tasks.png %}){:width="600px"}
 
-We will now demonstrate how different reporting components can interact with each other when they use the same *Data Set*. To demonstrate this we will add a metric component that sums the number of tasks and a list that shows the actual tasks.
+ここでは、異なるレポートコンポーネントが同じ *データセット* を使用するときに、どのように相互作用するかを示します。
+これを実証するために、タスクの数を合計するメトリックコンポーネントと、実際のタスクを表示するリストを追加します。
 
-1. From the *Reporting* components, drag the *Metric* component onto the page, next to the pie chart.
+1. *レポート* コンポーネントから、*メトリック* コンポーネントをページ上の円グラフの下にドラッグします。
 ![Create Dashboard Metric Component]({% image_path dashboard-metric-component.png %}){:width="600px"}
-2. In the *New Displayer* configuration page, click on the *Data* tab and select the *active_tasks_per_owner* Data Set and click on *Ok*.
+2. *新規ディスプレイヤー* 画面で、*データ* タブをクリックして、`active_tasks_per_owner` データセットを選択し、`OK`をクリックします。
 ![Create Dashboard Metric Edit Component]({% image_path dashboard-metric-component-edit.png %}){:width="600px"}
-3. Make the *Metric* component a bit smaller.
-4. From the *Reporting* components, drag the *Table* component on to the page and place it under the pie chart component.
+3. *メトリック* コンポーネントのサイズを調整して小さくしてください。
+4. *レポート* コンポーネントから、*テーブル* コンポーネントをページ上にドラッグし、円グラフコンポーネントの下に配置します。
 ![Create Dashboard Table Component]({% image_path dashboard-table-component.png %}){:width="600px"}
-5. In the *New Displayer* configuration page, click on the *Data* tab and select the *active_tasks_per_owner* Data Set and click on *Ok*.
+5. *新規ディスプレイヤー* 画面で、*データ* タブをクリックして、`active_tasks_per_owner` データセットを選択し、`OK` をクリックします。
 ![Create Dashboard Table Edit Component]({% image_path dashboard-table-component-edit.png %}){:width="600px"}
-6. Save the page by clicking on the *Save* button on the top of the screen.
+6. 画面上部の `保存` ボタンをクリックしてページを保存します。
 
-To demonstrate the filter functionality of the *Data Set* and the components that use it, click on "John's" tasks in the pie-chart. This will enable the filter on the *Data Set*, which dynamically changes the other reporting components that use the same data. Som the *Metric* component now shows the sum of John's tasks, and the table component now only shows tasks of which John is the owner.
+*データセット* とそれを使用するコンポーネントのフィルタ機能を実演するには、円グラフの `John` タスクをクリックします。
+これにより、*データセット* のフィルタが有効になり、同じデータを使用する他のレポートコンポーネントが動的に変更されます。
+これにより、*メトリック* コンポーネントには *John* のタスクの合計が表示され、テーブルコンポーネントには *John* が所有者であるタスクのみが表示されるようになりました。
 
-We can also select a second user, for example "George", to filter just the tasks owned by John and George. Note how the other components adapt to the filters.
+*John* と * George* が所有するタスクだけをフィルタリングするために、2番目のユーザ、例えば "George "を選択して追加することもできます。
+他のコンポーネントがどのようにフィルタに適応するかに注目してください。
 
-Finally, the filters can be cleared by either clicking in the pie-chart, or removing the items from filter row at the top of the component.
+円グラフ内をクリックするか、コンポーネントの上部にあるフィルターの行から項目を削除することで、フィルターをクリアすることができます。
 
 ![Create Report Tasks 2]({% image_path create-report-tasks-2.png %}){:width="600px"}
