@@ -1,25 +1,27 @@
-# DataSets
+# データセットの作成
 
-Now that we have a *DataSource* defined, we can create our *DataSet*.
+これで *データソース* が定義されたので、*データセット* を作成することができます。
 
-A *DataSet* in Process Automation Manager 7 defines a set of data, consumed from one of the supported providers. A provider can be a Java Bean, a CSV file, a database table or SQL query, or an ElasticSearch query. Apart from fetching data from a provider, a *DataSet* also provides functionality like caching and filtering of data, which improves performance and allows for flexibility in data fetching depending on the requirements of the report.
+Process Automation Manager 7の *データセット* は、サポートされているプロバイダによって利用されるデータのセットを定義します。
+プロバイダは、Java Bean、CSVファイル、データベーステーブルやSQLクエリ、またはElasticSearchクエリにすることができます。
+プロバイダからデータを取得することとは別に、*データセット* は、データのキャッシングやフィルタリングのような機能も提供します。
 
-1. Go to the “Settings” screen by clicking on the gear icon in the upper right corner:
+1. 右上の歯車アイコンをクリックして `設定` 画面に移動します:
 ![Business Central Settings]({% image_path business-central-settings.png %}){:width="600px"}
-2. Click on the *Data Sets* tile.
+2. `データセット` タイルをクリックします。
 ![Business Central Dataset Settings]({% image_path business-central-dataset.png %}){:width="600px"}
-3. In the *Data Set Explorer* screen, click on the *New Data Set* button.
-4. Select the *SQL* provider type.
+3. *データセットエクスプローラ* 画面で、*新しいデータセット* ボタンをクリックします。
+4. プロバイダーのタイプは **SQL** を選択します。
 ![Business Central Dataset New Settings]({% image_path business-central-dataset-new.png %}){:width="600px"}
-5. In the *Data Set Creation Wizard*, provide the following configuration:  
-    - Name: `active_tasks_per_owner`  
-    - Data Source: `PAM-Workshop-Reporting`  
-    - Schema: (leave empty)  
-    - Source: enable *Query* and use the following SQL Query:  
+5. *データセット作成ウィザード* では、以下の設定を入力します:  
+    - 名前: `active_tasks_per_owner`  
+    - データソース: `PAM-Workshop-Reporting`  
+    - スキーマ: (空欄)  
+    - ソース: **クエリー** を選択し、以下のSQLクエリを使用します:  
     `select id, status, actualowner FROM task WHERE status = 'active'`  
-6. Click on the *Test* button. This will execute the query and show a preview of the result.
+6. *テスト* ボタンをクリックします。これでクエリが実行され、結果のプレビューが表示されます。
 ![Business Central Dataset New Test]({% image_path business-central-dataset-new-test.png %}){:width="600px"}
-7. When the test is successful, click on the *Next* button and save the *Data Set*.
+7. テストが成功したら、`次へ` ボタンをクリックして、*データセット* を保存します。
 ![Business Central Dataset New Test]({% image_path business-central-dataset-next.png %}){:width="600px"}
 
 The configured query simply selects all the tasks that are active and their owners.

@@ -9,7 +9,7 @@ modules:
   creating-datasources:
     name: データソースの作成
   creating-datasets:
-    name: Creating DataSets
+    name: データセットの作成
   creating-report-tasks:
     name: Creating Task Reports
   creating-report-customer-satisfaction:

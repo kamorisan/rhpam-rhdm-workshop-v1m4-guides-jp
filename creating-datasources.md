@@ -56,7 +56,7 @@ Process Automation Manager 7 は、プラットフォームの構成設定に応
 
 データソースを作成したので、その内容を調べてみましょう。
 
-1. 先ほど作成した `PAM-Workshop-Reportin`* データソースをクリックして開きます。
+1. 先ほど作成した `PAM-Workshop-Reportin` データソースをクリックして開きます。
 2. パネル上部の *コンテンツの閲覧* ボタンをクリックします。これにより、データソースの *スキーマ* が開きます。
 3. `public` スキーマの `開く` ボタンをクリックします。
 ![RHPAM Enablement Dataset Explore]({% image_path pam-enablement-dataset-explore.png %}){:width="600px"}
