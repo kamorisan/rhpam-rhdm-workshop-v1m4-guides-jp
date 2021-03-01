@@ -1,17 +1,18 @@
-# Publishing Reports
+# レポートの公開
 
-Apart from creating report pages, we can also add these pages to the Process Automation Manager 7 Business Central workbench navigation.
+レポートページの作成後、これらのページを Business Central のワークベンチ・ナビゲーションに追加することもできます。
 
-To do this:
+ナビゲーションへの追加の手順:
 
-1. Go to *Menu* -> *Design* -> *Pages* and click on the *Navigation* icon on the left-hand side of the screen.
-2. Expand the *Workbench* entry. Note that the main menu items of Business Central are listed: Design, Deploy, Manage, Track
-3. Add a new top-level menu called *Report* by clicking on the gear icon next to the *Workbench* entry and select *+ New Group*. Give the the group the name `Report`.
-4. Save the changes by clicking the *Save* button.
-5. Click on the gear icon next to the *Report* group and click on *+ New Page*. Select the *active-tasks-report* and save the changes.
-6. Click again on the gear icon next to the *Report* group and click on *+ New Page*. Select the *customer-satisfaction-report* and save the changes.
-6. Click on the *Menu* on the top bar of the workbench and note that a new *Report* group has been added to the menu which contains our 2 report pages. Click on one of them to open the given page.
+1. *メニュー* → *デザイン* → *ページ *と進み、画面左側の *ナビゲーション* アイコンをクリックします。
+2. **ワークベンチ** エントリを展開します。Business Centralのメインメニュー項目が表示されていることに注意してください: 設計、デプロイ、管理、トラック
+3. *ワークベンチ* エントリの横にある歯車アイコンをクリックして、*+ 新規 Group* を選択して、*レポート* という名前の新しいナビゲーションメニューを追加します。グループに `レポート`  という名前を付けます。
+4. `保存` ボタンをクリックして変更を保存します。
+5. *レポート* グループの横にある歯車アイコンをクリックし、*+新規 ページ* をクリックします。`active-tasks-report` を選択し、変更を保存します。
+6. *レポート* グループの横にある歯車アイコンを再度クリックし、*+新規 ページ* をクリックします。`customer-satisfaction-report`を選択し、変更を保存します。
+7. ワークベンチのトップバーにある *メニュー* をクリックして、新しい **レポート** グループがメニューに追加されていることに注意してください。そのうちの1つをクリックすると、そのページを開くことができます。
 
 ![Create Report Navigation Menu]({% image_path create-report-navigation-menu.png %}){:width="600px"}
 
-The Business Central workbench contains a lot more options to create even more sophisticated pages and applications, including navigation elements like menu-bars and carousels. We leave it as exercise to the user to create these more advanced pages and applications with these page navigation components.
+Business Central ワークベンチには、メニューバーやカルーセルなどのナビゲーション要素を含む、より洗練されたページやアプリケーションを作成するための多くのオプションが用意されています。
+これらのページ・ナビゲーション・コンポーネントを使用して、より高度なレポートページやアプリケーションをユーザーで作成をすることができます。。
